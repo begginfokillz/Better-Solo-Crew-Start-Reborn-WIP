@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Afflictions>
+
+   <Affliction
+    name="afflictionname.InnerMerchant"
+    identifier="InnerMerchant"
+    type="clownpower"
+    isbuff="true"
+    limbspecific="false"
+    maxstrength="1"
+    iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-1"/>
+      <StatusEffect target="Character" setvalue="true">
+		<StatValue stattype="SkillGainSpeed" value="0.015" />
+      </StatusEffect>
+    <Icon texture="Mods/Better Solo Crew Start Reborn/SendNudes/Talents/TalentsIcons1.png" sourcerect="495,896,116,126" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="afflictionname.MerchantSong"
+    identifier="MerchantSong"
+    type="soothingsounds"
+    isbuff="true"
+    limbspecific="false"
+    maxstrength="1"
+    iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="50" maxstrength="50" strengthchange="-0.15">
+      <StatusEffect target="Character" setvalue="true">
+		<StatValue stattype="SkillGainSpeed" value="0.3" />
+        <ReduceAffliction identifier="damage" strength="0.3" />
+        <ReduceAffliction identifier="burn" strength="0.3" />
+        <ReduceAffliction identifier="bloodloss" strength="0.3" />
+        <ReduceAffliction identifier="bleeding" strength="0.3" />
+      </StatusEffect>
+    </Effect>
+    <Icon texture="Mods/Better Solo Crew Start Reborn/SendNudes/Talents/TalentsIcons1.png" sourcerect="215,895,118,127" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="afflictionname.MerchantSongSelf"
+    identifier="MerchantSongSelf"
+    description="afflictiondescription.MerchantSongSelf"
+    type="psychosis"
+    limbspecific="false"
+    indicatorlimb="Head"
+    activationthreshold="0"
+    showiconthreshold="1000"
+    showicontoothersthreshold="20"
+    treatmentthreshold="20"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="100"
+      maxvitalitydecrease="0"
+      strengthchange="-0.1"/>
+    <Icon texture="Mods/Better Solo Crew Start Reborn/SendNudes/Talents/TalentsIcons1.png" sourcerect="215,895,118,127" color="10,193,114,255" origin="0,0"/>
+    <PeriodicEffect mininterval="30" maxinterval="120">
+      <StatusEffect target="Character" onlyoutside="true">
+        <Conditional IsLocalPlayer="True"/>
+        <Sound file="Content/Characters/Spineling/SPINELING_idle2.ogg" selectionmode="Random"/>
+        <Sound file="Content/Characters/Spineling/SPINELING_idle4.ogg" />
+        <Sound file="Content/Characters/Tigerthresher/TIGERTRESHER_idle1.ogg" />
+        <Sound file="Content/Characters/Tigerthresher/TIGERTRESHER_idle2.ogg" />
+        <Sound file="Content/Characters/Tigerthresher/TIGERTRESHER_attack1.ogg" />
+        <Sound file="Content/Characters/Moloch/MOLOCH_attack1.ogg" />
+        <Sound file="Content/Characters/Moloch/MOLOCH_attack2.ogg" />
+        <Sound file="Content/Characters/Husk/HUSK_idle1.ogg" />
+        <Sound file="Content/Characters/Husk/HUSK_idle4.ogg" />
+        <Sound file="Content/Characters/Hammerheadmatriarch/MHAMMERHEAD_idle3.ogg" />
+        <Sound file="Content/Characters/Hammerhead/HAMMERHEAD_idle4.ogg" />
+        <Sound file="Content/Characters/Hammerhead/HAMMERHEAD_attack2.ogg" />
+        <Sound file="Content/Characters/Hammerhead/HAMMERHEAD_attack3.ogg" />
+        <Sound file="Content/Characters/Crawlerhusk/HUSKEDCRAWLER_idle1.ogg" />
+        <Sound file="Content/Characters/Crawlerhusk/HUSKEDCRAWLER_idle3.ogg" />
+        <Sound file="Content/Characters/Crawlerhusk/HUSKEDCRAWLER_attack2.ogg" />
+      </StatusEffect>
+      <StatusEffect target="Character" onlyinside="true">
+        <Conditional IsLocalPlayer="True"/>
+        <Sound file="Content/Items/Weapons/honk.ogg" selectionmode="Random" />
+        <Sound file="Content/Items/Weapons/ShotgunShot1.ogg" />
+        <Sound file="Content/Items/Weapons/ShotgunShot2.ogg" />
+        <Sound file="Content/Characters/Moloch/MOLOCH_attack1.ogg" />
+        <Sound file="Content/Characters/Moloch/MOLOCH_attack2.ogg" />
+        <Sound file="Content/Characters/Mudraptor/MUDRAPTOR_attack1.ogg" />
+        <Sound file="Content/Characters/Mudraptor/MUDRAPTOR_attack2.ogg" />
+        <Sound file="Content/Characters/Mudraptor/MUDRAPTOR_idle4.ogg" />
+        <Sound file="Content/Characters/Husk/HUSK_idle1.ogg" />
+        <Sound file="Content/Characters/Husk/HUSK_idle4.ogg" />
+        <Sound file="Content/Characters/Husk/HUSK_attack4.ogg" />
+        <Sound file="Content/Characters/Crawler/CRAWLER_idle3.ogg" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <PeriodicEffect mininterval="100" maxinterval="200">
+      <StatusEffect target="Character" duration="30" onlyinside="true">
+        <Conditional IsLocalPlayer="True"/>
+        <Sound file="Content/Items/WarningSiren.ogg" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>  
+  
+  
+</Afflictions>

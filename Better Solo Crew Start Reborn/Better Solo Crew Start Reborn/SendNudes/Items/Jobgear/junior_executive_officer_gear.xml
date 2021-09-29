@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!-- FAKE ID START -->
+  <!-- FAKE ID INSTRUCTION: to edit card access, change CAPTAIN tag from tags section to whatever tag you set in a sub editor to be the highest clearance level for interacting with items -->
+  <Item name="Old Emergency Access Card" identifier="idcard_deluxe" category="Equipment" Tags="smallitem,idcard,captain" Description="A unique ID card with a captain level clearance codes for a certain submarine...but which?" cargocontaineridentifier="metalcrate">
+    <Price baseprice="10" soldeverywhere="false" />
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
+    <Sprite texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/idcarddeluxe.png" depth="0.8" sourcerect="0,0,16,16" />
+    <Body width="16" height="12" density="20" />
+    <IdCard slots="Card,Any" msg="ItemMsgPickUpSelect" />
+  </Item>
+  <!-- FAKE ID END -->
+  <!-- HATS START -->
+  <Item name="Senior Assistant's Hat" identifier="junior_executive_officer_cap" aliases="Seniorassistantcap" category="Equipment" tags="juniorexecutiveofficercap,smallitem,clothing" cargocontaineridentifier="metalcrate" description="A worn out hat, loved by its owner due to amount of wear and tear it suffered through countless missions. Normally worn down and patched up by a very senior and experienced crewman over a very long period of time at sea, due to the fact it was no longer in production long after it was first issued to its owner." scale="0.4">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <Price baseprice="75" minleveldifficulty="1" buyingpricemodifier="2" >
+      <Price locationtype="outpost" multiplier="1" minavailable="1"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" minavailable="1"/>
+      <Price locationtype="military" multiplier="1" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" minavailable="1"/>
+    </Price>
+    <Deconstruct time="10"/>
+    <Sprite name="Senior Assistant's Hat" texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/junior_executive_officer_gear.png" depth="0.6" sourcerect="408,13,86,50" origin="0.5,0.5" />
+    <Body width="75" height="50" density="30" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Senior Assistant's Hat Wearable" texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/junior_executive_officer_gear.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hidelimb="false" sourcerect="408,13,86,50" origin="0.4,0.9" />
+      <SkillModifier skillidentifier="electrical" skillvalue="5"/>
+      <SkillModifier skillidentifier="helm" skillvalue="5"/>
+      <SkillModifier skillidentifier="mechanical" skillvalue="5"/>
+      <SkillModifier skillidentifier="medical" skillvalue="5"/>
+      <SkillModifier skillidentifier="weapons" skillvalue="5"/>
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.95" />
+    </Wearable>
+  </Item>
+  <!-- HATS END -->
+  <!-- GUNS START -->
+  <Item name=".75 calibre heavy revolver" identifier="customhandcannon" category="Equipment" cargocontaineridentifier="metalcrate" description="A massive revolver chambered for .75 caliber rounds. It packs a big punch, and an even bigger price tag." tags="smallitem,weapon,gun,pistolitem" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Price baseprice="2500" minleveldifficulty="1" buyingpricemodifier="5" >
+      <Price locationtype="outpost" multiplier="1" maxavailable="8"/>
+      <Price locationtype="city" multiplier="0.9" maxavailable="8"/>
+      <Price locationtype="research" multiplier="0.9" maxavailable="8"/>
+      <Price locationtype="military" multiplier="1" maxavailable="8"/>
+      <Price locationtype="mine" multiplier="0.75" maxavailable="8"/>
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="70" requiresrecipe="true">
+      <RequiredSkill identifier="weapons" level="5" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="steel" />
+      <Item identifier="titaniumaluminiumalloy" />
+    </Deconstruct>
+	<InventoryIcon texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/junior_executive_officer_gear.png" sourcerect="210,9,40,63" depth="0.55" origin="0.5,0.5" />
+	<Sprite texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/junior_executive_officer_gear.png" sourcerect="266,11,124,64" depth="0.55" origin="0.5,0.5" />
+    <Body width="126" height="53" density="70" />
+    <!--DEFAULT SIZE <Body width="106" height="49" density="70" /> -->
+    <!--DEFAULT HOLDABLE <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="90,10" handle1="-30,-14" handle2="-80,-25" msg="ItemMsgPickUpSelect" /> -->
+    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="90,10" handle1="-50,-14" handle2="-80,-25" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon reload="1.2" barrelpos="20,6" spread="0" unskilledspread="3" combatPriority="90" drawhudwhenequipped="true" crosshairscale="0.2">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Sound file="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/m1911singleShot1.ogg" type="OnUse" range="3000" selectionmode="Random" />
+      <Sound file="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/m1911singleShot2.ogg" type="OnUse" range="3000" selectionmode="Random" />
+      <Sound file="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/m1911singleShot3.ogg" type="OnUse" range="3000" selectionmode="Random" />
+      <Sound file="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/m1911singleShot4.ogg" type="OnUse" range="3000" selectionmode="Random" />
+      <Sound file="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/m1911singleShot5.ogg" type="OnUse" range="3000" selectionmode="Random" />
+      <Sound file="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/m1911singleShot6.ogg" type="OnUse" range="3000" selectionmode="Random" />
+      <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="7.0,7.0" colormultiplier="255,200,115,200" />
+      <StatusEffect type="OnUse">
+        <Explosion range="300.0" force="50" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="12.0" />
+      </StatusEffect>
+      <RequiredItems items="customhandcannonammo" type="Contained" msg="ItemMsgAmmoRequired" />
+      <RequiredSkill identifier="weapons" level="5" />
+    </RangedWeapon>
+    <ItemContainer capacity="1" maxstacksize="6" hideitems="true" containedstateindicatorstyle="bullet">
+      <Containable items="customhandcannonammo" />
+    </ItemContainer>
+    <aitarget sightrange="2000" soundrange="5000" fadeouttime="5" />
+    <Quality>
+      <QualityStat stattype="AttackMultiplier" value="0.1"/>
+    </Quality>
+  </Item>
+ 
+  <Item name=".75 calibre cartridge" identifier="customhandcannonround" category="Equipment" maxstacksize="30" description="A massive .75 calibre hollowpoint steel bullet in a large coppper casing, creating a gloriously deadly cartridge. It is manufactured on earth and exported to europa in small shipments, so crews usually make their own batches. It causes extreme bleeding and tissue damage. If someone somehow survives being hit with this, you might as well just give them a promotion..." interactthroughwalls="true" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,customhandcannonammo,handcannonammo,pistolammoitem" impactsoundtag="impact_metal_light">
+    <Price baseprice="120" minleveldifficulty="1" buyingpricemodifier="5" >
+      <Price locationtype="outpost" multiplier="1" maxavailable="24"/>
+      <Price locationtype="city" multiplier="0.9" maxavailable="24"/>
+      <Price locationtype="research" multiplier="0.9" maxavailable="24"/>
+      <Price locationtype="military" multiplier="1" maxavailable="64"/>
+      <Price locationtype="mine" multiplier="0.75" maxavailable="64"/>
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true" amount="24">
+      <RequiredSkill identifier="weapons" level="5" />
+      <RequiredItem identifier="magnesium" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="copper" />
+    </Fabricate>
+    <InventoryIcon texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/junior_executive_officer_gear.png" sourcerect="35,7,10,25" origin="0.5,0.5" />
+    <Sprite texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/junior_executive_officer_gear.png" sourcerect="1,49,28,11" depth="0.55" origin="0.5,0.5" />
+    <Body width="34" height="14" density="50" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Projectile characterusable="false" hitscan="true" removeonhit="true">
+      <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,200,115,200" scalemultiplier="1,1" />
+      <Attack structuredamage="10" targetforce="12" itemdamage="40" severlimbsprobability="1.0" penetration="0.5">
+        <Affliction identifier="bleeding" strength="85" />
+        <Affliction identifier="gunshotwound" strength="85" />
+        <Affliction identifier="stun" strength="5" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="6,6" colormultiplier="255,200,115,200" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.75" scalemax="1" />
+      </StatusEffect>
+    </Projectile>
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+   <!-- GUNS END -->
+  <!-- STOLEN VALOR START -->
+  <Item name="Coalition Distinguished Service Cross" identifier="bettersolocrew_coalitioncross" category="Equipment" Tags="smallitem,bettersolocrew_coalitioncross" maxstacksize="1" scale="0.5" impactsoundtag="impact_soft" description="The highest honor an europan submarine crewman or officer can be awarded by the Coalition. Officially, its bestowal needs admirality approval and it is to be issued in a massive ceremony, but in reality a captain might sometimes hand it out like candy. It gives a huge experience boost to whoever it is awarded to.">
+    <Price baseprice="777" minleveldifficulty="65" buyingpricemodifier="5" >
+      <Price locationtype="outpost" multiplier="3" maxavailable="0"/>
+      <Price locationtype="city" multiplier="2" maxavailable="1"/>
+      <Price locationtype="research" multiplier="2" maxavailable="0"/>
+      <Price locationtype="military" multiplier="0.25" maxavailable="1"/>
+      <Price locationtype="mine" multiplier="0.75" maxavailable="0"/>
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="titaniumaluminiumalloy" />
+    </Deconstruct>
+    <InventoryIcon texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/junior_executive_officer_gear.png" sourcerect="50,6,34,62" depth="0.6" origin="0.5,0.5" />
+    <Sprite texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/junior_executive_officer_gear.png" sourcerect="4,6,21,38" depth="0.6" origin="0.5,0.5" />
+    <Body width="19" height="40" density="20" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="0,5" holdangle="90" reload="1.0" msg="ItemMsgPickUpSelect">
+      <Attack targetimpulse="5">
+        <!-- empty attack so that a talent can trigger-->
+      </Attack>
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
+        <Sound file="Content/Items/Button/button.ogg" type="OnUse" range="500" />
+        <GiveExperience amount="5000" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  <!-- STOLEN VALOR END -->
+  <!-- CONTAINERS START --> 
+  <Item name="Heavy Revolver Ammunition Box (Small)" identifier="customhandcannonammobox" category="Equipment" aliases="Heavy Revolver Ammunition Box (Small)" cargocontaineridentifier="metalcrate" tags="mediumitem,toolbox"
+  description="Small box for up to 64 hand cannon catridges or 240 heavy revolver catridges." scale="0.4" pickdistance="150" impactsoundtag="impact_metal_light" HideConditionBar="true">
+    <Price baseprice="120" minleveldifficulty="1" buyingpricemodifier="2" >
+      <Price locationtype="outpost" multiplier="1" maxavailable="25"/>
+      <Price locationtype="city" multiplier="0.9" maxavailable="25"/>
+      <Price locationtype="research" multiplier="0.9" maxavailable="25"/>
+      <Price locationtype="military" multiplier="1" maxavailable="25"/>
+      <Price locationtype="mine" multiplier="0.75" maxavailable="25"/>
+    </Price>
+	
+    <Deconstruct time="10">
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Sprite texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/junior_executive_officer_gear.png" depth="0.54" sourcerect="99,4,100,67" origin="0.5,0.5" />
+    <Body width="100" height="68" density="12" />
+    <Holdable slots="Any,RightHand,LeftHand" holdpos="10,-70" handle1="0,-20" aimable="false" msg="ItemMsgPickUpSelect" />
+    <ItemContainer autofill="False" capacity="8" slotsperrow="4" maxstacksize="24" canbeselected="false" hideitems="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,240,112,16" />
+      <Containable items="handcannonammo,customhandcannonround" />
+    </ItemContainer>
+  </Item>
+  <!-- CONTAINERS END -->
+  <!-- UNIFORM START -->
+  <Item name="Senior Assistant Uniform" identifier="junior_executive_officer_clothes" category="Equipment" tags="juniorexecutiveofficerclothes,smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="A heavilly modified assistant's uniform, hand tailored by its owner to protect the wearer, and it shows. Normally worn down and patched up by a very senior and experienced crewman over a very long period of time at sea."  scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.125"/>
+    <Price baseprice="420" minleveldifficulty="1" buyingpricemodifier="2" >
+      <Price locationtype="outpost" multiplier="1" minavailable="1"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" minavailable="1"/>
+      <Price locationtype="military" multiplier="1" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" minavailable="1"/>
+    </Price>
+    <Deconstruct time="10"/>
+    <InventoryIcon name="Senior Assistant Uniform Icon" texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="383,274,128,110" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="664,375,212,64" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Senior Assistant's Uniform Torso" texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/Senior_Petty_Officer.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Senior Assistant's Uniform Right Hand" texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/Senior_Petty_Officer.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Senior Assistant's Uniform Left Hand" texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/Senior_Petty_Officer.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Senior Assistant's Uniform Left Lower Arm" texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/Senior_Petty_Officer.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Senior Assistant's Uniform Right Lower Arm" texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/Senior_Petty_Officer.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Senior Assistant's Uniform Left Upper Arm" texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/Senior_Petty_Officer.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Senior Assistant's Uniform Right Upper Arm" texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/Senior_Petty_Officer.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Senior Assistant's Uniform Waist" texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/Senior_Petty_Officer.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Senior Assistant's Uniform Right Thigh" texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/Senior_Petty_Officer.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Senior Assistant's Uniform Left Thigh" texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/Senior_Petty_Officer.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Senior Assistant's Uniform Right Leg" texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/Senior_Petty_Officer.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Senior Assistant's Uniform Left Leg" texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/Senior_Petty_Officer.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Senior Assistant's Uniform Right Shoe" texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/Senior_Petty_Officer.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Senior Assistant's Uniform Left Shoe" texture="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/Senior_Petty_Officer.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <SkillModifier skillidentifier="electrical" skillvalue="5"/>
+      <SkillModifier skillidentifier="helm" skillvalue="5"/>
+      <SkillModifier skillidentifier="mechanical" skillvalue="5"/>
+      <SkillModifier skillidentifier="medical" skillvalue="5"/>
+      <SkillModifier skillidentifier="weapons" skillvalue="5"/>
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.95" />
+    </Wearable>
+  </Item>
+  <!-- UNIFORM END -->
+</Items>

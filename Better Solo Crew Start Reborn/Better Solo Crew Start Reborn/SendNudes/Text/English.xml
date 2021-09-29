@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+
+<jobname.junior_executive_officer>Senior Assistant</jobname.junior_executive_officer>
+<jobdescription.junior_executive_officer>The Senior Assistant is the most experienced and seniormost crewman who is not in fact in an officer postion in the chain of command, but due to extensive service and experience, he serves as the captains advisor and liason between him and the underlings. This role is best given to that one crewman the Captain trusts the most.</jobdescription.junior_executive_officer>
+
+<talenttree.senior_clown>The Senior Clown</talenttree.senior_clown>
+<talenttree.the_veteran_sailor>The Veteran Sailor</talenttree.the_veteran_sailor>
+<talenttree.the_merchant_of_venice>The Merchant of Venice</talenttree.the_merchant_of_venice>
+
+<talentname.insurancepolicyveteran>Veterans Insurance Policy</talentname.insurancepolicyveteran>
+<talentdescription.insurancepolicyveteran>Whenever you die from non-friendly sources during a mission, your crew is paid [amount] marks for each mission you've completed since the last time you've died.</talentdescription.insurancepolicyveteran>
+
+<talentname.truckerdeluxe>Experienced Hauler</talentname.truckerdeluxe>
+<talentdescription.truckerdeluxe>You are paid an additional [extra]% for cargo and escort missions, along with a single lump sum payout of [stipend] marks.</talentdescription.truckerdeluxe>
+
+<talentname.piratehunter1>Renowned Pirate Hunter</talentname.piratehunter1>
+<talentdescription.piratehunter1>You are renowned for putting pirates in the ground and turning their ships to rusted scrap.</talentdescription.piratehunter1>
+<talentdescription.payextra.piratehunter1>You are paid an additional [extra]% for pirate hunt missions, and recieve and aditional [value]% more reputation per pirate hunt mission.</talentdescription.payextra.piratehunter1>
+
+<talentname.piratehunter2>Master Pirate Hunter</talentname.piratehunter2>
+<talentdescription.piratehunter2>You are a master in the art of putting pirates in the ground and turning their ships to rusted scrap.</talentdescription.piratehunter2>
+<talentdescription.payextra.piratehunter2>You are paid an additional [extra]% for pirate hunt missions, along with a single lump sum payout of [stipend] marks.</talentdescription.payextra.piratehunter2>
+
+<talentname.cargoandescortdeluxe>Traveling Merchant</talentname.cargoandescortdeluxe>
+<talentdescription.cargoandescortdeluxe>You are well known for delivering wares on time.</talentdescription.cargoandescortdeluxe>
+<talentdescription.payextra.cargoandescortdeluxe>You are paid an additional [extra]% for cargo and escort missions.</talentdescription.payextra.cargoandescortdeluxe>
+
+<talentname.insurancepolicyveteran>Veterans Insurance Policy</talentname.insurancepolicyveteran>
+<talentdescription.insurancepolicyveteran>Whenever you die from non-friendly sources during a mission, your crew is paid [amount] marks for each mission you've completed since the last time you've died.</talentdescription.insurancepolicyveteran>
+
+<talentname.insurancepolicymerchant>Merchants Guild Insurance Policy</talentname.insurancepolicymerchant>
+<talentdescription.insurancepolicymerchant>Whenever you die from non-friendly sources during a mission, your crew is paid [amount] marks for each mission you've completed since the last time you've died.</talentdescription.insurancepolicymerchant>
+
+<talentname.finalsolution>Final Solution</talentname.finalsolution>
+<talentdescription.finalsolution>Whenever you personally kill an enemy pirate captain or an enemy bandit leader, your surviving crew gains additional lump sum payment of [moneyamount] marks.</talentdescription.finalsolution>
+<talentdescription.payextra.finalsolution>Whenever you personally kill an enemy pirate captain or an enemy bandit leader, your surviving crew gains additional lump sum payment of [moneyamount] marks.</talentdescription.payextra.finalsolution>
+
+<talentname.CastleDoctrineVeteran>Hold The Line</talentname.CastleDoctrineVeteran>
+<talentdescription.CastleDoctrineVeteran>[talentdesc]!</talentdescription.CastleDoctrineVeteran>
+<talentdescription.payextra.CastleDoctrineVeteran>Whenever you or a member of the crew kills an enemy that has entered your ship, your surviving crew gains additional lump sum payment of [moneyamount] marks.</talentdescription.payextra.CastleDoctrineVeteran>
+
+<talentname.graduationceremonyveteran>Final Promotion</talentname.graduationceremonyveteran>
+<talentdescription.graduationceremonyveteran>Due to your many years of experience in the field, and still living to tell of them, you get one final promotion in your junior crewman career. You carry over this experience when you make a new character. You also get a bonus of [skillbonus] to all skills for your current character, and a unique medal which gives a massive experience bonus if used on another character, or it can be deconstructed to get those skills for yourself.</talentdescription.graduationceremonyveteran>
+
+<talentname.InnerMerchanttalent>Initiate of The Secret Merchants Guild</talentname.InnerMerchanttalent>
+<talentdescription.InnerMerchanttalent>You are inducted into the hidden cabal of kingmakers and market manipulators. So long as you are a member of this order of merchants, and wear your job uniform proudly, you get a [DmgProtection]% damage resitance bonus, and you can one day tap into your inner merchant powers, and master them. Not now, but soon.</talentdescription.InnerMerchanttalent>
+
+<talentname.MerchantSongTalent>A Song of Blood and Trade</talentname.MerchantSongTalent>
+<talentdescription.MerchantSongTalent>You have ascended and unlocked your inner merchant powers, and can now tap into it via song! While you are using a guitar, you drive allies to glory with buffed damage resistance of [dmgprotection]% and a boosted learning rate of [SkillGainSpeed]%, [bloodlustdesc] The effect wears off after [time] seconds of not playing the song. [bloodlustdesc2]</talentdescription.MerchantSongTalent>
+
+<afflictionname.MerchantSong>Inpired by a Song of Blood and Trade</afflictionname.MerchantSong>
+<afflictiondescription.MerchantSong>The power of currency compels you! Your resistance to all damage types is increased by 30% and you gain 30% bonus to experience gain per action!</afflictiondescription.MerchantSong>
+
+<afflictionname.MerchantSongSelf>Driven Insane by a Song of Blood and Trade</afflictionname.MerchantSongSelf>
+<afflictiondescription.MerchantSongSelf>Your mind has been ravaged by ancient tales of Money and Madness!</afflictiondescription.MerchantSongSelf>
+
+<afflictionname.InnerMerchant>Inner Merchant</afflictionname.InnerMerchant>
+<afflictiondescription.InnerMerchant>Only through blood and profit will we save Europa.</afflictiondescription.InnerMerchant>
+<afflictiondescription.DmgProtection.InnerMerchant>You gained [DmgProtection]% damage reduction!</afflictiondescription.DmgProtection.InnerMerchant>
+
+</infotexts>

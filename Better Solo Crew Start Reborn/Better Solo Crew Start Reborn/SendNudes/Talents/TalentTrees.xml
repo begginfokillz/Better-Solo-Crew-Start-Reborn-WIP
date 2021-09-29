@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TalentTrees>
+	<TalentTree jobidentifier="junior_executive_officer">
+    <SubTree identifier="senior_clown">
+      <TalentOptions>
+        <TalentOption identifier="enrollintoclowncollege"/>
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="waterprankster"/>
+        <TalentOption identifier="inspiringtunes"/>
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="psychoclown"/>
+        <TalentOption identifier="slapstickexpert"/>
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="truepotential"/>
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="the_veteran_sailor">
+      <TalentOptions>
+        <TalentOption identifier="stillkicking"/>
+        <TalentOption identifier="insurancepolicyveteran"/>
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="piratehunter1"/>
+        <TalentOption identifier="piratehunter2"/>
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="CastleDoctrineVeteran"/>
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="graduationceremonyveteran"/>
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="the_merchant_of_venice">
+      <TalentOptions>
+        <TalentOption identifier="InnerMerchanttalent"/>
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="travelingtradesman"/>
+        <TalentOption identifier="truckerdeluxe"/>
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="cargoandescortdeluxe"/>
+        <TalentOption identifier="insurancepolicymerchant"/>
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="MerchantSongTalent"/>
+      </TalentOptions>
+    </SubTree>
+  </TalentTree>
+</TalentTrees>

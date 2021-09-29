@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Better Solo Crew Start Reborn" path="Mods/Better Solo Crew Start Reborn/filelist.xml" corepackage="false" gameversion="0.13.3.11">
+  <Submarine file="Mods/Better Solo Crew Start Reborn/SendNudes/Submarines/SHYLOCK EK Deluxe Edition V7C.sub" />
+  <Jobs file="Mods/Better Solo Crew Start Reborn/SendNudes/Jobs/Jobs.xml" />
+  <Text file="Mods/Better Solo Crew Start Reborn/SendNudes/Text/English.xml" />
+  <Talents file="Mods/Better Solo Crew Start Reborn/SendNudes/Talents/Talents.xml"/>
+  <TalentTrees file="Mods/Better Solo Crew Start Reborn/SendNudes/Talents/TalentTrees.xml"/>
+  <Afflictions file="Mods/Better Solo Crew Start Reborn/SendNudes/Talents/AfflictionsCustom.xml"/>
+  <Item file="Mods/Better Solo Crew Start Reborn/SendNudes/Items/Jobgear/junior_executive_officer_gear.xml" />
+  <None file="Mods/Better Solo Crew Start Reborn/SendNudes/items/jobgear/junior_executive_officer_gear.png" />
+  <None file="Mods/Better Solo Crew Start Reborn/SendNudes/items/jobgear/Senior_Petty_Officer.png" />
+  <None file="Mods/Better Solo Crew Start Reborn/SendNudes/Jobs/NewIcons_amended.png" />
+</contentpackage>

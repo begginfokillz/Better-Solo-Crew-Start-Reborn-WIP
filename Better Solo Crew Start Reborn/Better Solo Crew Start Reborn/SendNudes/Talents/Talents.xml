@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talents>
+
+  <Talent identifier="InnerMerchanttalent">
+    <Description tag="talentdescription.InnerMerchanttalent">
+      <Replace tag="[DmgProtection]" value="25" color="gui.green"/>
+    </Description>
+    <Icon texture="Mods/Better Solo Crew Start Reborn/SendNudes/Talents/TalentsIcons1.png" sourcerect="390,389,118,118"/>
+    <AbilityGroupInterval>
+      <Conditions>
+        <AbilityConditionHasItem tags="juniorexecutiveofficerclothes,juniorexecutiveofficercap" requireall="true"/>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" >
+              <Affliction identifier="InnerMerchant" amount="1.0"/>
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval>
+      <Conditions>
+        <AbilityConditionHasAffliction target="Character" afflictionidentifier="InnerMerchant" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyResistance resistanceid="damage" resistance="0.25"/>
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+
+  <Talent identifier="MerchantSongTalent">
+    <Description tag="talentdescription.MerchantSongTalent">
+	<Replace tag="[bloodlustdesc1]" value="but playing the song will drive you into a frenzied bloodlust! You will go psychotic in the process." color="gui.red"/> 
+	<Replace tag="[bloodlustdesc2]" value="The song is once forgotten sacred anthem of the master merchants of old earth's trade capital, Jerusalem." color="gui.green"/> 
+	<Replace tag="[SkillGainSpeed]" value="15" color="gui.green"/>
+    <Replace tag="[dmgprotection]" value="25" color="gui.green"/>
+    </Description>  
+    <Icon texture="Mods/Better Solo Crew Start Reborn/SendNudes/Talents/TalentsIcons1.png" sourcerect="261,263,116,115"/>
+    <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="InnerMerchant" minimumpercentage="0.1"/>
+        <AbilityConditionItem itemidentifier="guitar"/>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character">
+              <Affliction identifier="MerchantSongSelf" strength="20"/>
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects target="NearbyCharacters" nearbycharactersappliestoself="false">
+          <StatusEffects>
+            <StatusEffect type="OnAbility" targettypes="NearbyCharacters,Ally" range="600" >
+              <Affliction identifier="MerchantSong" strength="20.0"/>
+			  </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+
+  <Talent identifier="piratehunter1">
+    <Description tag="talentdescription.piratehunter1"/>
+    <Description tag="talentdescription.payextra.piratehunter1">
+      <Replace tag="[extra]" value="25" color="gui.green"/>
+      <Replace tag="[value]" value="250" color="gui.green"/>
+    </Description>
+    <Icon texture="Mods/Better Solo Crew Start Reborn/SendNudes/Talents/TalentsIcons1.png" sourcerect="899,262,118,117"/>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="ReputationGainMultiplier" value="0.25"/>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionMoney">
+      <Conditions>
+        <AbilityConditionMission missiontype="Pirate"/>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGiveMoney amount="250"/>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+
+  <Talent identifier="piratehunter2">
+    <Description tag="talentdescription.piratehunter2"/>
+    <Description tag="talentdescription.payextra.piratehunter2">
+      <Replace tag="[extra]" value="25" color="gui.green"/>
+      <Replace tag="[stipend]" value="250" color="gui.green"/>
+    </Description>
+    <Icon texture="Mods/Better Solo Crew Start Reborn/SendNudes/Talents/TalentsIcons1.png" sourcerect="899,262,118,117"/>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionMoney">
+      <Conditions>
+        <AbilityConditionMission missiontype="Pirate"/>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue addedvalue="0.075"/>
+        <CharacterAbilityGiveMoney amount="250"/>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>  
+
+  <Talent identifier="cargoandescortdeluxe">
+    <Description tag="talentdescription.payextra.cargoandescortdeluxe">
+      <Replace tag="[extra]" value="50" color="gui.green"/>
+    </Description>
+    <Icon texture="Mods/Better Solo Crew Start Reborn/SendNudes/Talents/TalentsIcons1.png" sourcerect="901,8,116,116"/>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionMoney">
+      <Conditions>
+        <AbilityConditionMission missiontype="Escort"/>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGiveMoney addedvalue="0.050"/>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionMoney">
+      <Conditions>
+        <AbilityConditionMission missiontype="Cargo"/>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGiveMoney addedvalue="0.050"/>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+
+  <Talent identifier="CastleDoctrineVeteran">
+    <Description tag="talentdescription.CastleDoctrineVeteran">
+      <Replace tag="[talentdesc]" value="NOT ONE STEP BACK!" color="gui.red"/>
+    </Description>
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="Hand Cannon Ammunition Box (Small), Bespoke Hand Cannon Ammunition Box (Small), .75 Hollowpoint Round, Bespoke Hand Cannon" color="gui.orange"/>
+    </Description>
+    <Description tag="talentdescription.payextra.CastleDoctrineVeteran">
+      <Replace tag="[moneyamount]" value="500" color="gui.green"/>
+    </Description>  
+    <Icon texture="Mods/Better Solo Crew Start Reborn/SendNudes/Talents/TalentsIcons1.png" sourcerect="518,7,117,117"/>
+    <AbilityGroupEffect abilityeffecttype="OnCrewKillCharacter">
+      <Conditions>
+        <AbilityConditionCharacter targettypes="Enemy,InFriendlySubmarine"/>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGiveMoney amount="500"/>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AddedRecipe itemidentifier="customhandcannon"/>
+    <AddedRecipe itemidentifier="customhandcannonround"/>
+    <AddedRecipe itemidentifier="customhandcannonammobox"/>
+  </Talent>  
+
+  <Talent identifier="truckerdeluxe">
+    <Description tag="talentdescription.truckerdeluxe">
+      <Replace tag="[extra]" value="50" color="gui.green"/>
+      <Replace tag="[stipend]" value="250" color="gui.green"/>
+    </Description>
+    <Icon texture="Mods/Better Solo Crew Start Reborn/SendNudes/Talents/TalentsIcons1.png" sourcerect="896,0,128,128"/>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionMoney">
+      <Conditions>
+        <AbilityConditionMission missiontype="Escort"/>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue addedvalue="0.050"/>
+        <CharacterAbilityGiveMoney amount="250"/>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionMoney">
+      <Conditions>
+        <AbilityConditionMission missiontype="Cargo"/>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue addedvalue="0.050"/>
+        <CharacterAbilityGiveMoney amount="250"/>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  
+  <Talent identifier="insurancepolicymerchant">
+    <Description tag="talentdescription.insurancepolicymerchant">
+      <Replace tag="[amount]" value="3000" color="gui.green"/>
+    </Description>
+    <Icon texture="Mods/Better Solo Crew Start Reborn/SendNudes/Talents/TalentsIcons1.png" sourcerect="901,8,116,116"/>
+    <AbilityGroupEffect abilityeffecttype="OnDieToCharacter">
+      <Conditions>
+        <AbilityConditionCharacter invert="true" targettypes="Ally" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityInsurancePolicy moneypermission="3000" requiresalive="false" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveResistance resistanceid="reaperstax" multiplier="0" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent> 
+
+  <Talent identifier="insurancepolicyveteran">
+    <Description tag="talentdescription.insurancepolicyveteran">
+      <Replace tag="[amount]" value="1500" color="gui.green"/>
+    </Description>
+    <Icon texture="Mods/Better Solo Crew Start Reborn/SendNudes/Talents/TalentsIcons1.png" sourcerect="519,390,115,117"/>
+    <AbilityGroupEffect abilityeffecttype="OnDieToCharacter">
+      <Conditions>
+        <AbilityConditionCharacter invert="true" targettypes="Ally" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityInsurancePolicy moneypermission="1500" requiresalive="false" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveResistance resistanceid="reaperstax" multiplier="0" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent> 
+
+  <Talent identifier="graduationceremonyveteran">
+    <Description tag="talentdescription.graduationceremonyveteran">
+	<Replace tag="[skillbonus]" value="15" color="gui.green"/>
+    </Description>
+    <Description tag="talentdescription.maximumhealthperlevel">
+      <Replace tag="[maximumhealth]" value="8" color="gui.green"/>
+    </Description>
+    <Icon texture="Mods/Better Solo Crew Start Reborn/SendNudes/Talents/TalentsIcons1.png" sourcerect="261,135,118,118"/>
+	 <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityPutItem itemidentifier="bettersolocrew_coalitioncross" spawnifinventoryfull="true"/>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveFlag flagtype="RetainExperienceForNewCharacter"/>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupInterval interval="0.5" >
+      <Abilities>
+        <CharacterAbilityModifyStatToLevel stattype="MaximumHealthMultiplier" statperlevel="0.08"/>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupEffect abilityeffecttype="OnItemDeconstructed">
+      <Conditions>
+        <AbilityConditionItem tags="bettersolocrew_coalitioncross"/>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character">
+              <GiveSkill skillidentifier="electrical" amount="25"/>
+              <GiveSkill skillidentifier="helm" amount="25"/>
+              <GiveSkill skillidentifier="mechanical" amount="25"/>
+              <GiveSkill skillidentifier="medical" amount="25"/>
+              <GiveSkill skillidentifier="weapons" amount="25"/>
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnAttack">
+      <Conditions>
+        <AbilityConditionAttackData itemidentifier="bettersolocrew_coalitioncross"/>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="This">
+              <GiveSkill skillidentifier="electrical" amount="25"/>
+              <GiveSkill skillidentifier="helm" amount="25"/>
+              <GiveSkill skillidentifier="mechanical" amount="25"/>
+              <GiveSkill skillidentifier="medical" amount="25"/>
+              <GiveSkill skillidentifier="weapons" amount="25"/>
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+</Talents>
